@@ -2,6 +2,7 @@ import React from 'react'
 import Swal from 'sweetalert2'
 
 const ColorList = ({colorList}) => {
+  
   const handlerCopyColor=(color)=>{
     navigator.clipboard.writeText(color);
     Swal.fire({
@@ -13,6 +14,7 @@ const ColorList = ({colorList}) => {
       timerProgressBar: true,
     })
   }
+
   return (
     <div className='list-group text-center'>
       { colorList.length > 0 ? (colorList.map((color, index) => 
